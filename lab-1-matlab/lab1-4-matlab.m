@@ -33,8 +33,8 @@ function result = det(matrix)
     else
         result = 0;
         for j = 1:size_matrix(2)
-            minor = matrix(2:end, [1:j-1, j+1:end]);
-            result = result + ((-1)^(j+1)) * matrix(1, j) * det(minor);
+            x = matrix(2:end, [1:j-1, j+1:end]);
+            result = result + ((-1)^(j+1)) * matrix(1, j) * det(x);
         end
     end
 end
