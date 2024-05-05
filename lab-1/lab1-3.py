@@ -1,11 +1,11 @@
 rows = int(input("Enter the number of rows: "))
-columns = int(input("Enter the number of columns: "))
+cols = int(input("Enter the number of columns: "))
 
 print("Enter the elements of the first matrix (row-wise, separated by space):")
 a = []
 for i in range(rows):
     row = list(map(int, input().split()))
-    if len(row) != columns:
+    if len(row) != cols:
         print("error:entered no of cols doent not match the given cols")
         break
     a.append(row)
@@ -14,7 +14,7 @@ print("Enter the elements of the second matrix (row-wise, separated by space):")
 b = []
 for i in range(rows):
     row = list(map(int, input().split()))
-    if len(row) != columns:
+    if len(row) != cols:
         print("error:entered no of cols doent not match the given cols")
         break
     b.append(row)
@@ -22,7 +22,7 @@ for i in range(rows):
 sum = []
 for i in range(rows):
     sum_row = []
-    for j in range(columns):
+    for j in range(cols):
         sum_row.append(a[i][j] + b[i][j])
     sum.append(sum_row)
 
