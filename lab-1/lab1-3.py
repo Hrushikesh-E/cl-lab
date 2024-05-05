@@ -1,5 +1,5 @@
 rows = int(input("Enter the number of rows: "))
-columns = int(input("Enter the number of columns: "))
+cols = int(input("Enter the number of columns: "))
 
 print("Enter the elements of the first matrix (row-wise, separated by space):")
 a = []
