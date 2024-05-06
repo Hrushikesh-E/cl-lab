@@ -1,0 +1,28 @@
+f1 = input('Enter the frequency f1: ');
+A1 = input('Enter the amplitude for wave 1: ');
+f2 = input('Enter the frequency f2: ');
+A2 = input('Enter the amplitude for wave 2: ');
+x = input('Enter the start time: ');
+y = input('Enter the end time: ');
+t =x:0.01:y;
+w1 = A1 * sin(2 * pi * f1 * t);
+w2 = A2 * sin(2 * pi * f2 * t);
+y_add = w1 + w2;
+y_sub = w1 - w2;
+y_prod = w1 .* w2;
+subplot(3, 1, 1);
+plot(t, y_add);
+title('Addition');
+xlabel('t');
+ylabel('amp');
+subplot(3, 1, 2);
+plot(t, y_sub);
+title('Subtraction');
+xlabel('t');
+ylabel('amp');
+subplot(3, 1, 3);
+plot(t, y_prod);
+title('product');
+xlabel('t');
+ylabel('amp');
+

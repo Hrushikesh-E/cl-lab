@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+f1 = float(input('Enter the frequency f1: '))
+A1 = float(input('Enter the amplitude for wave 1: '))
+f2 = float(input('Enter the frequency f2: '))
+A2 = float(input('Enter the amplitude for wave 2: '))
+x = float(input('Enter the start time: '))
+y = float(input('Enter the end time: '))
+t = np.arange(x, y + 0.01, 0.01)
+w1 = A1 * np.sin(2 * np.pi * f1 * t)
+w2 = A2 * np.sin(2 * np.pi * f2 * t)
+y_add = w1 + w2
+y_sub = w1 - w2
+y_prod = w1 * w2
+plt.subplot(3, 1, 1)
+plt.plot(t, y_add)
+plt.title('Addition')
+plt.xlabel('t')
+plt.ylabel('amp')
+plt.subplot(3, 1, 2)
+plt.plot(t, y_sub)
+plt.title('Subtraction')
+plt.xlabel('t')
+plt.ylabel('amp')
+plt.subplot(3, 1, 3)
+plt.plot(t, y_prod)
+plt.title('product')
+plt.xlabel('t')
+plt.ylabel('amp')
+plt.show()
